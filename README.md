@@ -20,16 +20,6 @@ Maven Dependency:
 </dependency>
 ```
 
-You can use *SNAPSHOT* dependency with adding to `pom.xml`:
-```xml
-<repositories>
-  <repository>
-    <id>ossrh</id>
-    <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-  </repository>
-</repositories>
-```
-
 ## Examples
 ```java
 VerbalExpression testRegex = VerbalExpression.regex()
@@ -109,7 +99,7 @@ You can view all implementations on [VerbalExpressions.github.io](http://VerbalE
 [Haskell](https://github.com/VerbalExpressions/HaskellVerbalExpressions) - 
 [C++](https://github.com/VerbalExpressions/CppVerbalExpressions) - ... ([moarr](https://github.com/VerbalExpressions)) ] 
 
-## Project released with travis
+## Releasing
 
-With help of this tutorial:
-https://dracoblue.net/dev/uploading-snapshots-and-releases-to-maven-central-with-travis/
+Pushing a tag (e.g. `1.9`) runs `.github/workflows/release.yml`: it runs the CI tests, sets the version
+from the tag, publishes to Maven Central via the Central Portal and creates a GitHub release.
